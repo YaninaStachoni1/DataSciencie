@@ -25,7 +25,7 @@ La Encuesta Mundial de Salud Escolar (EMSE) utiliza una metodología estandariza
 ## Análisis exploratorio de datos:
 En [esta notebook](https://github.com/YaninaStachoni1/DataSciencie/blob/main/Segunda_entrega_correcciones.ipynb) se encuentra el análisis exploratio, tratamiento de datos nulos, outliers y gráficos. En ella se realizaron las siguientes tareas:
 
-1) Como primera medida se analizaron todas las preguntas de la encuensta y se decidió cuáles eran de interés para nuestros objetivos. Mediante [este formulario](/Segunda%20Entrega/Analisis%20Preguntas.xlsx) se configuraron las columnas a importar y sus respectivos nombres de columas.
+1) Como primera medida se analizaron todas las preguntas de la encuensta y se decidió cuáles eran de interés para nuestros objetivos. Mediante [este formulario](https://github.com/YaninaStachoni1/DataSciencie/blob/main/Analisis%20Preguntas.xlsx) se configuraron las columnas a importar y sus respectivos nombres de columas.
 
 2) Luego se procedió a tratar los datos nulos, reemplazando el valor `Dato perdido` por `nan` 
 
@@ -51,7 +51,7 @@ Se detectó tambien que en el contexto escolar, el **60%** de las víctimas se s
 Se concluye que **es crucial implementar programas de prevención y concientización en las escuelas que no solo aborden el bullying sino que traten otras problemáticas que pueden desencadenarlo.**
 
 ## Modelo Supervisado:
-En [esta notebook](/Tercer%20Entrega/Tercer_entrega.ipynb) se crearon modelos supervisados con el objetivo de **detectar víctimas de intimidación escolar**. Por lo tanto:
+En [esta notebook](https://github.com/YaninaStachoni1/DataSciencie/blob/main/Tercer_entrega.ipynb) se crearon modelos supervisados con el objetivo de **detectar víctimas de intimidación escolar**. Por lo tanto:
 - La **variable dependiente** es **intimidacion_escuela**, que solo toma dos valores "Si" y "No".
 - El tipo de **aprendizaje** es **supervisado** ya que contamos con **datos etiquetados** (víctima / no víctima)
 - Nuestro problema es de **clasificación binaria** ya que tenemos dos posibles clases:
@@ -93,16 +93,16 @@ Luego se procedió a realizar una **reducción de dimensionalidad** quedando 36 
 
 Los modelos de aprendizaje no supervisado son:
 
-* **[DBSCAN](/Cuarta%20Entrega/Cuarta%20entrega%20(DBScan).ipynb)**
+* **[DBSCAN](https://github.com/YaninaStachoni1/DataSciencie/blob/main/Cuarta%20entrega%20(DBScan).ipynb)**
 En este caso se buscó la mejor combinación posible de los hiperparámetros `eps` y `min_samples`. Ya desde este punto se detectó algo extraño, ya que el gráfico del codo está sobre valores de epsilon muy grandes, lo que indica que varios puntos muy distantes serán tomados como parte del mismo clúster. Se probó de todas formas varias combinaciones con esos valores sugeridos y con otros menores. Pero se **concluye que los datos no tienen una distribución adecuada para este método** ya que con todas las variantes posibles no se logró formar clústers con sentido.
 
-* **[K-means (k = 2)](/Cuarta%20Entrega/Cuarta%20entrega(K-Means%20k=2).ipynb)** guiándonos por el método de Silhouette para determinar k. En este caso se encontraron dos clústeres bien diferenciados.
+* **[K-means (k = 2)](https://github.com/YaninaStachoni1/DataSciencie/blob/main/Cuarta%20entrega(K-Means%20k%3D2).ipynb)** guiándonos por el método de Silhouette para determinar k. En este caso se encontraron dos clústeres bien diferenciados.
 
 El **Clúster 0** agrupa principalmente a estudiantes de 11 a 15 años que no consumen alcohol, no se sienten solos, no han pensado en el suicidio, no han fumado marihuana y reciben apoyo de sus padres con las tareas.
 
 Por otro lado, el **Clúster 1** se compone mayoritariamente de adolescentes de 16 a 18 años que han experimentado soledad, han consumido alcohol, han considerado el suicidio y, en menor medida, han consumido marihuana, con menos apoyo parental en tareas escolares.
 
-* **[K-means (k = 6)](/Cuarta%20Entrega/Cuarta%20entrega(K-Means%20k=6).ipynb)** con k a partir del método del codo. En este caso los 6 clústers que se formaron no tenían una distribución clara ni estaban balanceados. El clúster 0, 3 y 4 tenían pocos individuos mientras los otros 3 concentraban la mayor cantidad de datos.
+* **[K-means (k = 6)](https://github.com/YaninaStachoni1/DataSciencie/blob/main/Cuarta%20entrega(K-Means%20k%3D6).ipynb)** con k a partir del método del codo. En este caso los 6 clústers que se formaron no tenían una distribución clara ni estaban balanceados. El clúster 0, 3 y 4 tenían pocos individuos mientras los otros 3 concentraban la mayor cantidad de datos.
 
 **Conclusiones:**
 Consideramos apropiado utilizar el modelo K-means con un k de 2 que nos permite clasificar a los individuos encuestados entre aquellos que requieren mayor supervisión, talleres y otras acciones para abordar sus problemáticas como el consumo de sustancias, embarazos, sentimientos de soledad o pensamientos suicidas y aquellos que cuentan con apoyo de su familia y no presentan mayores problemas de comportamiento.
