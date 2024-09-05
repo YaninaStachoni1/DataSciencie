@@ -23,7 +23,7 @@ La Encuesta Mundial de Salud Escolar (EMSE) utiliza una metodología estandariza
 
 
 ## Análisis exploratorio de datos:
-En [esta notebook](/Segunda%20Entrega/Segunda_entrega.ipynb) se encuentra el análisis exploratio, tratamiento de datos nulos, outliers y gráficos. En ella se realizaron las siguientes tareas:
+En [esta notebook](https://github.com/YaninaStachoni1/DataSciencie/blob/main/Segunda_entrega_correcciones.ipynb) se encuentra el análisis exploratio, tratamiento de datos nulos, outliers y gráficos. En ella se realizaron las siguientes tareas:
 
 1) Como primera medida se analizaron todas las preguntas de la encuensta y se decidió cuáles eran de interés para nuestros objetivos. Mediante [este formulario](/Segunda%20Entrega/Analisis%20Preguntas.xlsx) se configuraron las columnas a importar y sus respectivos nombres de columas.
 
